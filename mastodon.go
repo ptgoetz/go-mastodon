@@ -169,7 +169,7 @@ func (c *Client) AuthenticateToken(ctx context.Context, authCode, redirectURI st
 	params := url.Values{
 		"client_id":     {c.Config.ClientID},
 		"client_secret": {c.Config.ClientSecret},
-		"grant_type":    {"authorization_code"},
+		"grant_type":    {"client_credentials"},
 		"code":          {authCode},
 		"redirect_uri":  {redirectURI},
 	}
