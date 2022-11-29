@@ -6,7 +6,7 @@ import (
 	"log"
 	"time"
 
-	"github.com/mattn/go-mastodon"
+	"github.com/ptgoetz/go-mastodon"
 )
 
 func ExampleRegisterApp() {
