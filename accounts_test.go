@@ -540,11 +540,11 @@ func TestAccountsSearch(t *testing.T) {
 		ClientSecret: "bar",
 		AccessToken:  "zoo",
 	})
-	_, err := client.AccountsSearch(context.Background(), "zzz", 2)
+	_, err := client.AccountsSearch(context.Background(), "zzz", false, 2)
 	if err == nil {
 		t.Fatalf("should be fail: %v", err)
 	}
-	res, err := client.AccountsSearch(context.Background(), "foo", 2)
+	res, err := client.AccountsSearch(context.Background(), "foo", false, 2)
 	if err != nil {
 		t.Fatalf("should not be fail: %v", err)
 	}
