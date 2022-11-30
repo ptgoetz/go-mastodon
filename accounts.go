@@ -275,6 +275,7 @@ func (c *Client) AccountsSearch(ctx context.Context, q string, limit int64) ([]*
 	params := url.Values{}
 	params.Set("q", q)
 	params.Set("limit", fmt.Sprint(limit))
+	params.Set("resolve", "true")
 
 	var accounts []*Account
 	err := c.doAPI(ctx, http.MethodGet, "/api/v1/accounts/search", params, &accounts, nil)
